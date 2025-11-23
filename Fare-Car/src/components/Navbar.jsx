@@ -53,15 +53,15 @@ export default function Navbar() {
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled
-          ? "bg-gradient-to-r from-black via-gray-900 to-black backdrop-blur-lg shadow-lg shadow-black/50 py-4 md:py-5"
-          : "bg-gradient-to-b from-black/80 via-black/60 to-transparent backdrop-blur-md py-5 md:py-7"
+          ? "bg-gradient-to-r from-black via-gray-900 to-black backdrop-blur-lg shadow-lg shadow-black/50 py-6 md:py-7 lg:py-8"
+          : "bg-gradient-to-b from-black/80 via-black/60 to-transparent backdrop-blur-md py-8 md:py-10 lg:py-12"
       }`}
     >
-      <div className="w-full max-w-[1920px] mx-auto px-4 sm:px-6 md:px-12 lg:px-16 xl:px-24 2xl:px-32 flex justify-between items-center">
+      <div className="w-full max-w-[1920px] mx-auto px-6 sm:px-10 md:px-12 lg:px-16 xl:px-24 2xl:px-32 flex justify-between items-center">
         <a
           href="#home"
           onClick={(e) => scrollToSection(e, "home")}
-          className="text-lg sm:text-xl lg:text-2xl font-bold tracking-wide hover:text-red-500 transition-colors z-50 drop-shadow-lg"
+          className="text-lg sm:text-xl lg:text-2xl font-bold tracking-wide hover:text-white transition-colors z-50 drop-shadow-lg"
         >
           Fare-Car
         </a>
@@ -73,8 +73,8 @@ export default function Navbar() {
               key={link.id}
               href={`#${link.id}`}
               onClick={(e) => scrollToSection(e, link.id)}
-              className={`hover:text-red-500 transition-all duration-300 relative drop-shadow-md ${
-                activeSection === link.id ? "text-red-500 font-semibold" : "text-white"
+              className={`hover:text-white transition-all duration-300 relative drop-shadow-md ${
+                activeSection === link.id ? "text-white font-semibold" : "text-white"
               }`}
             >
               {link.label}
@@ -86,7 +86,7 @@ export default function Navbar() {
           <a
             href="#contact"
             onClick={(e) => scrollToSection(e, "contact")}
-            className="bg-gradient-to-r from-red-500 to-pink-600 text-white rounded-full px-6 lg:px-8 py-2.5 lg:py-3 shadow-lg shadow-red-500/50 hover:shadow-red-500/70 hover:scale-105 transition-all duration-300 font-semibold"
+            className="bg-gradient-to-r mt-4 px-10 from-blue-500 text-white rounded-full px-6 lg:px-8 py-2.5 lg:py-3 shadow-lg  hover:shadow-red-500/70 hover:scale-105 transition-all duration-300 font-semibold"
           >
             Contact
           </a>
@@ -138,7 +138,7 @@ export default function Navbar() {
           <a
             href="#contact"
             onClick={(e) => scrollToSection(e, "contact")}
-            className="bg-gradient-to-r from-red-500 to-pink-600 text-white rounded-full px-5 py-3 text-center shadow-lg shadow-red-500/50 hover:shadow-red-500/70 hover:scale-105 transition-all duration-300 mt-2 font-semibold"
+            className="bg-gradient-to-r from-blue-500 text-white rounded-full px-5 py-3 text-center shadow-lg  hover:shadow-red-500/70 hover:scale-105 transition-all duration-300 mt-2 font-semibold"
           >
             Contact
           </a>

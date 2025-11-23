@@ -69,7 +69,7 @@ export default function Hero() {
             >
               <a
                 href="#explore"
-                className="group bg-gradient-to-r from-red-500 via-red-600 to-pink-600 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-full flex items-center gap-3 sm:gap-4 shadow-2xl shadow-red-500/50 hover:shadow-red-500/70 hover:scale-105 transition-all duration-300 text-sm sm:text-base font-semibold w-full sm:w-auto justify-center"
+                className="group bg-gradient-to-r from-blue-500 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-full flex items-center gap-3 sm:gap-4 shadow-2xl shadow-red-500/50 hover:shadow-red-500/70 hover:scale-105 transition-all duration-300 text-sm sm:text-base font-semibold w-full sm:w-auto justify-center"
               >
                 <span>Explore the features</span>
                 <span className="w-8 h-8 sm:w-9 sm:h-9 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center group-hover:bg-white/30 transition-all">
@@ -101,7 +101,7 @@ export default function Hero() {
                   onClick={() => goTo(i)}
                   className={`transition-all duration-300 rounded-full ${
                     i === index
-                      ? "w-10 sm:w-12 h-2.5 sm:h-3 bg-gradient-to-r from-red-500 to-pink-500"
+                      ? "w-10 sm:w-12 h-2.5 sm:h-3 bg-gradient-to-r from-blue-500"
                       : "w-2.5 h-2.5 sm:w-3 sm:h-3 bg-white/60 hover:bg-white/80"
                   }`}
                   aria-label={`Go to slide ${i + 1}`}

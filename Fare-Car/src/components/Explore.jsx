@@ -48,7 +48,7 @@ export default function Explore() {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 lg:gap-10">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 lg:gap-10 xl:gap-12">
           {features.map((feature, index) => (
             <motion.div
               key={feature.id}
@@ -67,7 +67,7 @@ export default function Explore() {
                 <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-transparent to-transparent opacity-60"></div>
               </div>
               <div className="p-5 sm:p-6 lg:p-7">
-                <h3 className="text-xl sm:text-2xl font-bold mb-2 sm:mb-3 group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:from-red-500 group-hover:to-pink-500 group-hover:bg-clip-text transition-all duration-300">
+                <h3 className="text-xl sm:text-2xl font-bold mb-2 sm:mb-3 group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:from-blue-500 group-hover:bg-clip-text transition-all duration-300">
                   {feature.title}
                 </h3>
                 <p className="text-gray-300 leading-relaxed text-sm sm:text-base">{feature.description}</p>
@@ -86,7 +86,7 @@ export default function Explore() {
           transition={{ duration: 0.6, delay: 0.6 }}
           className="mt-12 sm:mt-16 lg:mt-20 text-center"
         >
-          <button className="bg-gradient-to-r from-red-500 via-red-600 to-pink-600 text-white px-8 sm:px-10 py-4 sm:py-5 rounded-full text-base sm:text-lg font-bold hover:shadow-2xl hover:shadow-red-500/50 hover:scale-105 transition-all duration-300 shadow-xl shadow-red-500/30 w-full sm:w-auto">
+          <button className="bg-gradient-to-r from-blue-500 text-white px-8 sm:px-10 py-4 sm:py-5 rounded-full text-base sm:text-lg font-bold hover:shadow-2xl hover:scale-105 transition-all duration-300 shadow-xl shadow-blue-500/30 w-full sm:w-auto">
             View All Features
           </button>
         </motion.div>

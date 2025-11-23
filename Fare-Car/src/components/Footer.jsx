@@ -17,15 +17,15 @@ export default function Footer() {
   };
 
   return (
-    <footer className="bg-gradient-to-b from-gray-900 via-black to-black border-t border-gray-800/50 text-white py-12 sm:py-16 px-4 sm:px-6 md:px-12 lg:px-16 relative overflow-hidden">
+    <footer className="bg-gradient-to-b from-gray-900 via-black to-black border-t border-gray-800/50 text-white py-12 sm:py-16 px-4 sm:px-6 md:px-12 lg:px-16 xl:px-24 2xl:px-32 relative overflow-hidden">
       {/* Background Gradient Accent */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-96 h-96 bg-red-500/5 rounded-full blur-3xl"></div>
 
-      <div className="max-w-7xl mx-auto relative z-10">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-10 mb-10 sm:mb-12">
+      <div className="max-w-[1920px] mx-auto relative z-10">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-10 xl:gap-12 mb-10 sm:mb-12">
           {/* Brand */}
           <div>
-            <h3 className="text-2xl sm:text-3xl font-bold mb-4 bg-gradient-to-r from-red-500 to-pink-500 bg-clip-text text-transparent">
+            <h3 className="text-2xl sm:text-3xl font-bold mb-4 bg-gradient-to-r from-blue-500 bg-clip-text text-transparent">
               Fare-Car
             </h3>
             <p className="text-gray-300 text-sm sm:text-base leading-relaxed">
