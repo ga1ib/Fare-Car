@@ -25,8 +25,8 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" className="min-h-screen bg-gradient-to-b from-black via-gray-900 to-black text-white py-16 sm:py-20 md:py-24 px-4 sm:px-6 md:px-12 lg:px-16 xl:px-24 2xl:px-32 relative overflow-hidden">
-      {/* Background Gradient Accents */}
+    <section id="contact" className="min-h-screen bg-linear-to-b from-black via-gray-900 to-black text-white py-16 sm:py-20 md:py-24 px-4 sm:px-6 md:px-12 lg:px-16 xl:px-24 2xl:px-32 relative overflow-hidden">
+      {/* Background linear Accents */}
       <div className="absolute top-0 right-1/3 w-96 h-96 bg-green-500/10 rounded-full blur-3xl"></div>
       <div className="absolute bottom-0 left-1/3 w-96 h-96 bg-teal-500/10 rounded-full blur-3xl"></div>
 
@@ -38,7 +38,7 @@ export default function Contact() {
           transition={{ duration: 0.6 }}
           className="text-center mb-12 sm:mb-16"
         >
-          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6 bg-gradient-to-r from-white via-gray-100 to-gray-300 bg-clip-text text-transparent">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6 bg-linear-to-r from-white via-gray-100 to-gray-300 bg-clip-text text-transparent">
             Get In Touch
           </h2>
           <p className="text-gray-300 text-base sm:text-lg md:text-xl max-w-3xl mx-auto px-4 leading-relaxed">
@@ -53,7 +53,7 @@ export default function Contact() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm border border-gray-700/50 rounded-2xl p-6 sm:p-8 lg:p-10"
+            className="bg-linear-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm border border-gray-700/50 rounded-2xl p-6 sm:p-8 lg:p-10"
           >
             <form onSubmit={handleSubmit} className="space-y-5 sm:space-y-6">
               <div>
@@ -99,7 +99,7 @@ export default function Contact() {
                   value={formData.phone}
                   onChange={handleChange}
                   className="w-full px-4 sm:px-5 py-3 sm:py-4 bg-gray-900/80 border border-gray-700 rounded-xl focus:outline-none focus:border-red-500 focus:ring-2 focus:ring-red-500/20 transition-all text-white placeholder-gray-500"
-                  placeholder="+1 (555) 000-0000"
+                  placeholder="+880 ++++++++++"
                 />
               </div>
 
@@ -121,7 +121,7 @@ export default function Contact() {
 
               <button
                 type="submit"
-                className="w-full bg-gradient-to-r from-blue-500 text-white px-8 py-4 sm:py-5 rounded-full text-base sm:text-lg font-bold hover:shadow-2xl hover:shadow-red-500/50 hover:scale-105 transition-all duration-300 shadow-xl "
+                className="w-full bg-linear-to-r from-blue-500 to-blue-600 text-white px-8 py-4 sm:py-5 rounded-full text-base sm:text-lg font-bold hover:shadow-2xl hover:shadow-blue-500/50 hover:scale-105 transition-all duration-300 shadow-xl shadow-blue-500/30"
               >
                 Send Message
               </button>
@@ -136,14 +136,14 @@ export default function Contact() {
             transition={{ duration: 0.6 }}
             className="space-y-6 sm:space-y-8"
           >
-            <div className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm border border-gray-700/50 rounded-2xl p-6 sm:p-8 lg:p-10">
-              <h3 className="text-2xl sm:text-3xl font-bold mb-6 sm:mb-8 bg-gradient-to-r from-green-400 to-teal-400 bg-clip-text text-transparent">
+            <div className="bg-linear-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm border border-gray-700/50 rounded-2xl p-6 sm:p-8 lg:p-10">
+              <h3 className="text-2xl sm:text-3xl font-bold mb-6 sm:mb-8 bg-linear-to-r from-green-400 to-teal-400 bg-clip-text text-transparent">
                 Contact Information
               </h3>
 
               <div className="space-y-5 sm:space-y-6">
                 <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 sm:w-14 sm:h-14 bg-gradient-to-br from-green-500/20 to-teal-500/20 rounded-full flex items-center justify-center shrink-0 border border-green-500/30">
+                  <div className="w-12 h-12 sm:w-14 sm:h-14 bg-linear-to-br from-green-500/20 to-teal-500/20 rounded-full flex items-center justify-center shrink-0 border border-green-500/30">
                     <span className="text-xl sm:text-2xl">📍</span>
                   </div>
                   <div>
@@ -153,7 +153,7 @@ export default function Contact() {
                 </div>
 
                 <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 sm:w-14 sm:h-14 bg-gradient-to-br from-blue-500/20 to-cyan-500/20 rounded-full flex items-center justify-center shrink-0 border border-blue-500/30">
+                  <div className="w-12 h-12 sm:w-14 sm:h-14 bg-linear-to-br from-blue-500/20 to-cyan-500/20 rounded-full flex items-center justify-center shrink-0 border border-blue-500/30">
                     <span className="text-xl sm:text-2xl">📧</span>
                   </div>
                   <div>
@@ -163,17 +163,17 @@ export default function Contact() {
                 </div>
 
                 <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 sm:w-14 sm:h-14 bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-full flex items-center justify-center shrink-0 border border-purple-500/30">
+                  <div className="w-12 h-12 sm:w-14 sm:h-14 bg-linear-to-br from-purple-500/20 to-pink-500/20 rounded-full flex items-center justify-center shrink-0 border border-purple-500/30">
                     <span className="text-xl sm:text-2xl">📞</span>
                   </div>
                   <div>
                     <h4 className="font-bold mb-1 sm:mb-2 text-base sm:text-lg text-gray-200">Phone</h4>
-                    <p className="text-gray-300 text-sm sm:text-base">+1 (555) 123-4567</p>
+                    <p className="text-gray-300 text-sm sm:text-base">+880 000 555 84</p>
                   </div>
                 </div>
 
                 <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 sm:w-14 sm:h-14 bg-gradient-to-br from-yellow-500/20 to-orange-500/20 rounded-full flex items-center justify-center shrink-0 border border-yellow-500/30">
+                  <div className="w-12 h-12 sm:w-14 sm:h-14 bg-linear-to-br from-yellow-500/20 to-orange-500/20 rounded-full flex items-center justify-center shrink-0 border border-yellow-500/30">
                     <span className="text-xl sm:text-2xl">⏰</span>
                   </div>
                   <div>
@@ -184,8 +184,8 @@ export default function Contact() {
               </div>
             </div>
 
-            <div className="bg-gradient-to-br from-red-500/20 via-pink-500/20 to-purple-500/20 backdrop-blur-sm border border-red-500/40 rounded-2xl p-6 sm:p-8 lg:p-10 hover:border-red-500/60 hover:shadow-lg hover:shadow-red-500/20 transition-all duration-300">
-              <h3 className="text-2xl sm:text-3xl font-bold mb-3 sm:mb-4 bg-gradient-to-r from-blue-500 bg-clip-text text-transparent">
+            <div className="bg-linear-to-br from-blue-500/20 via-cyan-500/20 to-blue-600/20 backdrop-blur-sm border border-blue-500/40 rounded-2xl p-6 sm:p-8 lg:p-10 hover:border-blue-500/60 hover:shadow-lg hover:shadow-blue-500/20 transition-all duration-300">
+              <h3 className="text-2xl sm:text-3xl font-bold mb-3 sm:mb-4 bg-linear-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
                 Ready to Ride?
               </h3>
               <p className="text-gray-200 mb-6 sm:mb-8 text-sm sm:text-base leading-relaxed">

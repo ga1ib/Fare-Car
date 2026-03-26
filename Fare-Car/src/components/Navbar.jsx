@@ -4,6 +4,7 @@ export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState("home");
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isHidden] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -51,13 +52,20 @@ export default function Navbar() {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      className={`fixed top-0 left-0 right-0 w-full z-50 transition-transform duration-300 ease-in-out ${
+        isHidden ? "-translate-y-full" : "translate-y-0"
+      } ${
         isScrolled
-          ? "bg-gradient-to-r from-black via-gray-900 to-black backdrop-blur-lg shadow-lg shadow-black/50 py-6 md:py-7 lg:py-8"
-          : "bg-gradient-to-b from-black/80 via-black/60 to-transparent backdrop-blur-md py-8 md:py-10 lg:py-12"
+          ? "bg-linear-to-r from-black via-gray-900 to-black backdrop-blur-lg shadow-lg shadow-black/50 py-6 md:py-7 lg:py-8"
+          : "bg-linear-to-b from-black/80 via-black/60 to-transparent backdrop-blur-md py-8 md:py-10 lg:py-12"
       }`}
+      style={{
+        WebkitBackdropFilter: isScrolled ? 'blur(16px)' : 'blur(12px)',
+        backdropFilter: isScrolled ? 'blur(16px)' : 'blur(12px)',
+        willChange: 'transform'
+      }}
     >
-      <div className="w-full max-w-[1920px] mx-auto px-6 sm:px-10 md:px-12 lg:px-16 xl:px-24 2xl:px-32 flex justify-between items-center">
+      <div className="w-full max-w-[1920px] mx-auto px-6 sm:px-10 md:px-12 lg:px-16 xl:px-24 2xl:px-32 flex justify-between items-center" style={{ minHeight: '60px' }}>
         <a
           href="#home"
           onClick={(e) => scrollToSection(e, "home")}
@@ -66,27 +74,29 @@ export default function Navbar() {
           Fare-Car
         </a>
 
-        {/* Desktop Navigation - Left Side */}
-        <nav className="hidden md:flex items-center gap-6 lg:gap-8 xl:gap-10 text-sm lg:text-base font-medium">
+        {/* Desktop Navigation */}
+        <nav className="hidden md:flex items-center gap-6 lg:gap-8 xl:gap-10 text-sm lg:text-base font-medium" style={{ flexShrink: 0 }}>
           {navLinks.map((link) => (
             <a
               key={link.id}
               href={`#${link.id}`}
               onClick={(e) => scrollToSection(e, link.id)}
               className={`hover:text-white transition-all duration-300 relative drop-shadow-md ${
-                activeSection === link.id ? "text-white font-semibold" : "text-white"
+                activeSection === link.id ? "text-white font-semibold" : "text-gray-200"
               }`}
+              style={{ whiteSpace: 'nowrap', display: 'inline-block' }}
             >
               {link.label}
               {activeSection === link.id && (
-                <span className="absolute -bottom-1 left-0 w-full h-0.5 bg-gradient-to-r from-red-500 to-pink-500 rounded-full"></span>
+                <span className="absolute -bottom-1 left-0 w-full h-0.5 bg-linear-to-r from-blue-500 to-cyan-500 rounded-full"></span>
               )}
             </a>
           ))}
           <a
             href="#contact"
             onClick={(e) => scrollToSection(e, "contact")}
-            className="bg-gradient-to-r mt-4 px-10 from-blue-500 text-white rounded-full px-6 lg:px-8 py-2.5 lg:py-3 shadow-lg  hover:shadow-red-500/70 hover:scale-105 transition-all duration-300 font-semibold"
+            className="bg-linear-to-r from-blue-500 to-blue-600 text-white rounded-full px-6 lg:px-8 py-2.5 lg:py-3 shadow-lg shadow-blue-500/50 hover:shadow-blue-500/70 hover:scale-105 transition-all duration-300 font-semibold"
+            style={{ whiteSpace: 'nowrap', display: 'inline-block' }}
           >
             Contact
           </a>
@@ -118,18 +128,18 @@ export default function Navbar() {
 
       {/* Mobile Menu */}
       <div
-        className={`md:hidden fixed left-0 right-0 top-[60px] overflow-hidden transition-all duration-300 ${
+        className={`md:hidden fixed left-0 right-0 top-20 overflow-hidden transition-all duration-300 ${
           isMenuOpen ? "max-h-screen opacity-100" : "max-h-0 opacity-0"
         }`}
       >
-        <nav className="bg-gradient-to-b from-black via-gray-900 to-black backdrop-blur-xl px-4 sm:px-6 py-6 flex flex-col gap-4 shadow-2xl border-t border-gray-800">
+        <nav className="bg-linear-to-b from-black via-gray-900 to-black backdrop-blur-xl px-4 sm:px-6 py-6 flex flex-col gap-4 shadow-2xl border-t border-gray-800">
           {navLinks.map((link) => (
             <a
               key={link.id}
               href={`#${link.id}`}
               onClick={(e) => scrollToSection(e, link.id)}
-              className={`text-base sm:text-lg hover:text-red-500 transition-all duration-300 py-2 font-medium ${
-                activeSection === link.id ? "text-red-500 font-semibold" : "text-white"
+              className={`text-base sm:text-lg hover:text-blue-400 transition-all duration-300 py-2 font-medium ${
+                activeSection === link.id ? "text-blue-400 font-semibold" : "text-white"
               }`}
             >
               {link.label}
@@ -138,7 +148,7 @@ export default function Navbar() {
           <a
             href="#contact"
             onClick={(e) => scrollToSection(e, "contact")}
-            className="bg-gradient-to-r from-blue-500 text-white rounded-full px-5 py-3 text-center shadow-lg  hover:shadow-red-500/70 hover:scale-105 transition-all duration-300 mt-2 font-semibold"
+            className="bg-linear-to-r from-blue-500 to-blue-600 text-white rounded-full px-5 py-3 text-center shadow-lg shadow-blue-500/50 hover:shadow-blue-500/70 hover:scale-105 transition-all duration-300 mt-2 font-semibold"
           >
             Contact
           </a>

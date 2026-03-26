@@ -27,10 +27,10 @@ export default function Explore() {
   ];
 
   return (
-    <section id="explore" className="min-h-screen bg-gradient-to-b from-black via-gray-900 to-black text-white py-16 sm:py-20 md:py-24 px-4 sm:px-6 md:px-12 lg:px-16 xl:px-24 2xl:px-32 relative overflow-hidden">
-      {/* Background Gradient Accents */}
-      <div className="absolute top-0 left-1/4 w-96 h-96 bg-red-500/10 rounded-full blur-3xl"></div>
-      <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-pink-500/10 rounded-full blur-3xl"></div>
+    <section id="explore" className="min-h-screen bg-linear-to-b from-black via-gray-900 to-black text-white py-16 sm:py-20 md:py-24 px-4 sm:px-6 md:px-12 lg:px-16 xl:px-24 2xl:px-32 relative overflow-hidden">
+      {/* Background linear Accents */}
+      <div className="absolute top-0 left-1/4 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl"></div>
+      <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl"></div>
 
       <div className="max-w-[1920px] mx-auto relative z-10">
         <motion.div
@@ -40,7 +40,7 @@ export default function Explore() {
           transition={{ duration: 0.6 }}
           className="text-center mb-12 sm:mb-16"
         >
-          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6 bg-gradient-to-r from-white via-gray-100 to-gray-300 bg-clip-text text-transparent">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6 bg-linear-to-r from-white via-gray-100 to-gray-300 bg-clip-text text-transparent">
             Explore Our Features
           </h2>
           <p className="text-gray-300 text-base sm:text-lg md:text-xl max-w-3xl mx-auto px-4 leading-relaxed">
@@ -56,7 +56,7 @@ export default function Explore() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: index * 0.15 }}
-              className="group relative overflow-hidden rounded-xl sm:rounded-2xl bg-gradient-to-br from-gray-800/80 to-gray-900/80 backdrop-blur-sm border border-gray-700/50 hover:border-red-500/70 hover:shadow-2xl hover:shadow-red-500/20 transition-all duration-500"
+              className="group relative overflow-hidden rounded-xl sm:rounded-2xl bg-linear-to-br from-gray-800/80 to-gray-900/80 backdrop-blur-sm border border-gray-700/50 hover:border-blue-500/70 hover:shadow-2xl hover:shadow-blue-500/20 transition-all duration-500"
             >
               <div className="aspect-video overflow-hidden relative">
                 <img
@@ -64,16 +64,16 @@ export default function Explore() {
                   alt={feature.title}
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-transparent to-transparent opacity-60"></div>
+                <div className="absolute inset-0 bg-linear-to-t from-gray-900 via-transparent to-transparent opacity-60"></div>
               </div>
               <div className="p-5 sm:p-6 lg:p-7">
-                <h3 className="text-xl sm:text-2xl font-bold mb-2 sm:mb-3 group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:from-blue-500 group-hover:bg-clip-text transition-all duration-300">
+                <h3 className="text-xl sm:text-2xl font-bold mb-2 sm:mb-3 group-hover:text-transparent group-hover:bg-linear-to-r group-hover:from-blue-500 group-hover:to-cyan-500 group-hover:bg-clip-text transition-all duration-300">
                   {feature.title}
                 </h3>
                 <p className="text-gray-300 leading-relaxed text-sm sm:text-base">{feature.description}</p>
               </div>
-              <div className="absolute top-4 right-4 w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-gradient-to-br from-red-500/30 to-pink-500/30 backdrop-blur-md flex items-center justify-center border border-red-500/30 group-hover:scale-110 transition-transform duration-300">
-                <span className="text-red-400 text-lg sm:text-xl font-bold">{feature.id}</span>
+              <div className="absolute top-4 right-4 w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-linear-to-br from-blue-500/30 to-cyan-500/30 backdrop-blur-md flex items-center justify-center border border-blue-500/30 group-hover:scale-110 transition-transform duration-300">
+                <span className="text-blue-400 text-lg sm:text-xl font-bold">{feature.id}</span>
               </div>
             </motion.div>
           ))}
@@ -86,7 +86,7 @@ export default function Explore() {
           transition={{ duration: 0.6, delay: 0.6 }}
           className="mt-12 sm:mt-16 lg:mt-20 text-center"
         >
-          <button className="bg-gradient-to-r from-blue-500 text-white px-8 sm:px-10 py-4 sm:py-5 rounded-full text-base sm:text-lg font-bold hover:shadow-2xl hover:scale-105 transition-all duration-300 shadow-xl shadow-blue-500/30 w-full sm:w-auto">
+          <button className="bg-linear-to-r from-blue-500 to-blue-600 text-white px-8 sm:px-10 py-4 sm:py-5 rounded-full text-base sm:text-lg font-bold hover:shadow-2xl hover:shadow-blue-500/50 hover:scale-105 transition-all duration-300 shadow-xl shadow-blue-500/30 w-full sm:w-auto">
             View All Features
           </button>
         </motion.div>
